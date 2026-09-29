@@ -12,6 +12,9 @@
 ?>
 <article>
     <h1>Форма настроек загрузки ресурсов</h1>
+    <div class="g-help-screen g-help-screen--hidable">
+        <img src="<?= $assetsUrl, '/help/form.png' ?>" />
+    </div>
     <p>Форму настроек загрузки можно вызвать из:</p>
     <ul>
         <li>панели конфигурации веб-приложения;</li>
@@ -19,59 +22,53 @@
         <li>пуск, пункт "Конфигурация".</li>
     </ul>
     <h2>Поля формы</h2>
-    <ul class="g-help-list">
-        <li><b>Сбросить настройки.</b> Сбрасывает все настройки до значений по умолчанию (только после нажатия кнопки "Сохранить").</li>
-    </ul>
-
     <h3>Адрес загрузки файлов</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие поля:</p>    
+    <p>Для указания путей загрузки и скачивания файлов используются следующие поля:</p>    
     <ul class="g-help-list">
-        <li><b>Локальный (базовый) путь к папке.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Локальный (базовый) URL-путь.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Локальный (базовый) путь к папке.</b> Локальный путь к папке для загрузки файлов указывается относительно корневой папки веб‑приложения и должен начинаться с символа "/";</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Локальный (базовый) URL-путь.</b> URL-путь к файлам для скачивания задаётся в формате, начинающемся с "/". Некоторые компоненты пути могут быть преобразованы или перенаправлены правилами .htaccess.</li>
     </ul>
 
     <h3>Правила загрузки файла</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие поля:</p>    
+    <p>Правила загрузки файла устанавливаются следующими полями:</p>
     <ul class="g-help-list">
-        <li><b>Проверять расширение файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Проверять MIME-тип содержимого файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Без правил для ролей пользователей.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Проверяемые расширения файлов.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Проверять расширение файла.</b> При включённом флаге выполняется проверка расширения файла в процессе загрузки;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Проверять MIME-тип содержимого файла.</b> При включённом флаге выполняется проверка MIME-тип содержимого файла;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Без правил для ролей пользователей.</b> Указываются роли пользователей, для которых правила проверки загружаемых файлов не применяются;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Проверяемые расширения файлов.</b> Указывается список расширений файлов, подлежащих проверке при загрузке.</li>
     </ul>
 
     <h3>Новое имя файла после его загрузки</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие поля:</p>    
+    <p>Формирование нового имени файла по итогам загрузки определяется набором полей:</p>    
     <ul class="g-help-list">
-        <li><b>Транслитерация имени файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Формирование уникального имени файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Исключить специальные символы из имени файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Имя файла в нижнем регистре.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-        <li><b>Заменить специальные символы на.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-        <li><b>Максимальная длина имени файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Транслитерация имени файла.</b> При включённом флаге выполняется преобразование кириллических символов в имени файла в латинские;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Формирование уникального имени файла.</b> Если флаг включён, система формирует уникальное имя файла на этапе сохранения загруженного файла;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Исключить специальные символы из имени файла.</b> Если флаг включён, система удалит или заменит в названии файла символы, которые могут вызывать ошибки или непредсказуемое поведение в файловых системах, скриптах, URL и интерфейсах;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Имя файла в нижнем регистре.</b> При включённом флаге все буквы в названии файла будут приведены к строчному виду;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Заменить специальные символы на.</b> Все специальные символы в названии файла будут заменены на указанный символ;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Максимальная длина имени файла.</b> Устанавливается максимально допустимая длина имени файла. Если фактическая длина превышает заданное значение, имя автоматически укорачивается до установленного лимита с сохранением расширения.</li>
     </ul>
 
     <h3>Установка значений директивам PHP при каждой загрузке файла</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие поля:</p>    
+    <p>Значения директив PHP задаются посредством следующих полей:</p>    
     <ul class="g-help-list">
-        <li><b>Устанавливать значения директивам PHP.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальный размер закачиваемого файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальное количество загружаемых файлов.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Устанавливать значения директивам PHP.</b> При включённом флаге система автоматически устанавливает значения указанных ниже PHP-директив;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Максимальный размер загружаемого файла.</b> Значение максимального размера загружаемого файла устанавливается с помощью PHP-директив;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Максимальное количество загружаемых файлов.</b> Значение максимального количество загружаемых файлов устанавливается с помощью PHP-директив.</li>
     </ul>
 
     <h3>Конфигурация директив PHP для передачи максимально допустимого размера данных</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua и 
-имеет следующие атрибуты:</p>    
+    <p>Ниже перечислены основные параметры конфигурации, применяемые для управления загрузкой файлов. Каждый параметр отвечает за отдельный аспект процесса:</p>    
+    <ul>
+        <li><b>Максимально допустимый размер данных, отправляемых методом POST</b>;</li>
+        <li><b>Максимальный размер загружаемого файла</b>;</li>
+        <li><b>Максимальное разрешенное количество одновременно закачиваемых файлов</b>;</li>
+        <li><b>Максимальный объем памяти в байтах, который может использовать скрипт</b>;</li>
+        <li><b>Максимальное время в секундах для загрузки скрипта</b>;</li>
+        <li><b>Использование модуля INTL для транслита имен файлов</b>;</li>
+        <li><b>Разрешено закачивание файлов на стороне сервера</b>.</li>
+    </ul>
     <ul class="g-help-list">
-        <li><b>Максимально допустимый размер данных, отправляемых методом POST.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальный размер закачиваемого файла.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальное разрешенное количество одновременно закачиваемых файлов.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальный объем памяти в байтах, который может использовать скрипт.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Максимальное время в секундах для загрузки скрипта.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Использование модуля INTL для транслита имен файлов.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Разрешено закачивание файлов на стороне сервера.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><b>Сбросить настройки.</b> Сбрасывает все настройки до значений по умолчанию (только после нажатия кнопки "Сохранить").</li>
     </ul>
 </article>

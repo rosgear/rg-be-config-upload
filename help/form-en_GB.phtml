@@ -12,6 +12,9 @@
 ?>
 <article>
     <h1>Resource loading settings form</h1>
+    <div class="g-help-screen g-help-screen--hidable">
+        <img src="<?= $assetsUrl, '/help/form.png' ?>" />
+    </div>
     <p>The download settings form can be called from:</p>
     <ul>
         <li>web application configuration panel;</li>
@@ -19,54 +22,53 @@
         <li>start, item "Configuration".</li>
     </ul>
     <h2>Field columns</h2>
-    <ul class="g-help-list">
-        <li><b>Reset settings.</b> Resets all settings to default values (only after pressing the "Save" button).</li>
-    </ul>
-
     <h3>File upload address</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>    
+    <p>The following fields are used to specify paths for uploading and downloading files:</p>    
     <ul class="g-help-list">
-        <li><b>Local (base) folder path.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Local (base) URL path.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Local (base) folder path.</b> The local path to the file upload folder is specified relative to the web application's root folder and must begin with a "/" character;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Local (base) URL path.</b> The URL path to the files available for download is specified in a format starting with "/". Certain path components may be transformed or redirected by .htaccess rules.</li>
     </ul>
 
     <h3>File upload rules</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>    
+    <p>-</p>    
     <ul class="g-help-list">
-        <li><b>Check file extension.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Check MIME type of file content.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>No rules for user roles.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Checked file extensions.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Check file extension.</b> When this flag is enabled, the file extension is checked during the upload process;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Check file content MIME type.</b> When this flag is enabled, the file content MIME type is checked;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Exclude user roles.</b> Specifies the user roles to which upload validation rules do not apply;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>File extensions to check.</b> Specifies the list of file extensions to be checked during upload.</li>
     </ul>
 
     <h3>The new file name after uploading it</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>    
+    <p>The generation of the new filename upon completion of the upload is determined by a set of fields:</p>    
     <ul class="g-help-list">
-        <li><b>File name transliteration.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Formation of a unique file name.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Exclude special characters from filename.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>File name in lowercase.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-        <li><b>Replace special characters.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
-        <li><b>Maximum filename length.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Filename transliteration.</b> When enabled, Cyrillic characters in the filename are converted to Latin characters;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Generate unique filename.</b> When enabled, the system generates a unique filename when saving the uploaded file;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Exclude special characters from filename.</b> When enabled, the system removes or replaces characters in the filename that could cause errors or unpredictable behavior in file systems, scripts, URLs, or interfaces;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Lowercase filename.</b> When enabled, all letters in the filename are converted to lowercase;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Replace special characters with.</b> All special characters in the filename are replaced with the specified character;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Maximum filename length.</b> Sets the maximum allowed length for the filename. If the actual length exceeds the specified value, the filename is automatically truncated to the set limit while preserving the extension.</li>
     </ul>
 
     <h3>Setting values to PHP directives on every file upload</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>    
+    <p>PHP directive value are set using the following fields:</p>
     <ul class="g-help-list">
-        <li><b>Set values to PHP directives.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Maximum upload file size.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Maximum number of uploaded files.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Set PHP directive values.</b> When this option is enabled, the system automatically sets the values for the PHP directives listed below;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Maximum upload file size.</b> The maximum upload file size is set using PHP directives;</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Maximum number of uploaded files.</b> The maximum number of uploaded files is set using PHP directives.</li>
     </ul>
 
     <h3>PHP directive configuration to pass maximum allowed data size</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua and has the following fields:</p>    
+    <p>The following are the key configuration parameters used to manage file uploads. Each parameter controls a specific aspect of the process:</p>
+    <ul>
+        <li><b>Maximum allowed size of data sent via the POST method</b>;</li>
+        <li><b>Maximum upload file size</b>;</li>
+        <li><b>Maximum number of files that can be uploaded simultaneously</b>;</li>
+        <li><b>Maximum memory (in bytes) a script can use</b>;</li>
+        <li><b>Maximum execution time (in seconds) for the script</b>;</li>
+        <li><b>Use of the INTL module for transliterating filenames</b>;</li>
+        <li><b>Server-side file uploading enabled</b>.</li>
+    </ul>
     <ul class="g-help-list">
-        <li><b>The maximum allowable size of data sent by the POST method.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Maximum upload file size.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Maximum allowed number of simultaneously uploaded files.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>The maximum amount of memory in bytes that the script can use.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Maximum time in seconds to load the script.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Using the INTL module to transliterate filenames.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat;</li>
-        <li><b>Allowed file uploads on the server side.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</li>
+        <li><b>Reset settings.</b> Resets all settings to default values (only after pressing the "Save" button).</li>
     </ul>
 </article>
